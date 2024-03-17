@@ -1,0 +1,95 @@
+* {
+    font-family: "Kode Mono", monospace;
+}
+
+body {
+    background-image: url("background.webp");
+}
+
+
+span {
+    color: brown;
+}
+
+p {
+  margin-top: 80px;
+  font-weight: 800;
+color: yellow;
+}
+
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #4d6bff;
+}
+
+.container-ant {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    margin-top: 200px;
+
+}
+
+.ant-home {
+    background-image: url(home.jpg);
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0,0,0,0);
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    margin: 20px;
+    position: relative;
+    background-size: cover;
+
+}
+
+.ant {
+    background-image: url("ant.png");
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(0,0,0,0);
+    border-radius: 50%;
+    position: absolute;
+    transition: all 3s ease;
+}
+
+
+.ant1-1 { bottom: -29%; left: 10%; }
+.ant1-2 { bottom: -48%; left: 20%; }
+.ant1-3 { bottom: -33%; left: 30%; }
+.ant1-4 { bottom: -43%; left: 40%; }
+.ant1-5 { bottom: -55%; left: 50%; }
+.ant1-6 { bottom: -67%; left: 60%; }
+.ant1-7 { bottom: -88%; left: 70%; }
+.ant1-8 { bottom: -93%; left: 80%; }
+.ant1-9 { bottom: -47%; left: 90%; }
+.ant1-10 { bottom: -74%; left: 100%; }
+
+
+
+.ant2-1 { bottom: -56%; right: 10%; }
+.ant2-2 { bottom: -39%; right: 20%; }
+.ant2-3 { bottom: -53%; right: 30%; }
+.ant2-4 { bottom: -81%; right: 40%; }
+.ant2-5 { bottom: -42%; right: 50%; }
+.ant2-6 { bottom: -66%; right: 60%; }
+.ant2-7 { bottom: -63%; right: 70%; }
+.ant2-8 { bottom: -31%; right: 80%; }
+.ant2-9 { bottom: -78%; right: 90%; }
+.ant2-10 { bottom: -61%; right: 100%; }
+
+
+#home1:hover .ant {
+    bottom: 50%;
+    transform: translateY(-50%) translateX(-32px);
+
+}
+
+#home2:hover .ant {
+    bottom: 50%;
+    transform: translateY(-50%) translateX(26px);
+}

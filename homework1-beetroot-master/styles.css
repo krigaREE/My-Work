@@ -1,0 +1,617 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.left-panel, .right-panel {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex: 1;
+    max-width: 45%;
+        transition: transform 0.5s ease;
+        transform: perspective(600px) translateZ(0);
+        cursor: pointer;
+
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+
+h1, h2, h3, p {
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    color: #007bff;
+}
+
+
+.contact-button {
+    display: inline-block;
+    background-image: linear-gradient(45deg, #007BFF, #8811AA);
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.name-glow {
+    color: #FFFFFF;
+    text-shadow: 0 0 8px #00FF00, 0 0 10px #00FF00, 0 0 12px #00FF00;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-panel, .right-panel {
+        max-width: 90%;
+            transition: transform 0.5s ease;
+            transform: perspective(600px) translateZ(0);
+    }
+}
+
+.name-glow {
+    color: #007bff;
+    text-shadow: 0 0 8px #00FF00, 0 0 10px #00FF00, 0 0 12px #00FF00;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.left-panel:hover, .right-panel:hover, .github-panel:hover {
+    background-color: #f0f0f0;
+    transition: background-color 0.5s ease;
+    transform: perspective(1000px) rotateY(20deg) scale(1.05);
+    transition: transform 0.5s ease;
+    border: none;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+    transform: rotateX(0) rotateY(0);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    background: linear-gradient(45deg, #6e48aa, #9d50bb);
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05) translateZ(30px) rotateY(5deg);
+}
+}
+
+.video-background:hover, .container:hover {
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.5s ease;
+    transform: scale(1.1) rotateX(5deg) rotateY(5deg);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.container {
+    border: none;
+}
+
+.left-panel::before, .left-panel::after {
+    content: none;
+}
+
+hr {
+    display: none;
+}
+
+.panel {
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.video-background video {
+    width: auto;
+    height: auto;
+}
+
+
+.panel {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.left-panel, .right-panel {
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+.contact-button {
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.contact-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.parallax {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.parallax__layer--back {
+    transform: translateZ(-1px) scale(2);
+}
+.parallax__layer--base {
+    transform: translateZ(0);
+}
+
+/* Ensure readability over video background */
+.panel {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #fff; /* White text color */
+    padding: 20px;
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .panel {
+        margin: 10px;
+        font-size: 14px; /* Smaller text on mobile devices */
+    }
+}
+
+/* Enhanced accessibility */
+a, button {
+    color: #00f; /* Ensure links are visible */
+    text-decoration: underline; /* Make it clear they are clickable */
+}
+
+/* Visual enhancements */
+.contact-button:hover {
+    background-color: #0056b3; /* Darker shade when hovered */
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+/* Correcting class attribute typo */
+.name-glow {
+    text-shadow: 0 0 10px #fff; /* Glow effect for name */
+}
+
+
+.panels-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This centers the child elements (panels) horizontally */
+    justify-content: center; /* Adjusts distribution of children along the column, optional */
+    gap: 20px; /* Adds space between each panel */
+}
+
+.panel {
+    width: 80%; /* Adjust width as needed */
+    max-width: 600px; /* Ensures the panel doesn't get too wide on larger screens */
+    margin: 0 auto; /* Additional centering for non-flexbox scenarios */
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+/* Ensure the GitHub panel styling is consistent with these adjustments */
+.github-panel {
+    /* Inherits styles from .panel, plus any GitHub-specific styles */
+    text-align: center;
+    cursor: pointer;
+}
+
+.left-panel {
+    margin-right: 20px; /* Adjust the space as needed */
+}
+
+/* or, if you prefer to add space to both panels equally */
+.left-panel, .right-panel {
+    margin: 0 10px; /* Adds 10px space to both sides of each panel */
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+header, footer {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.nav-links li a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    text-align: center;
+}
+
+.nav-links li a:hover {
+    color: #4db8ff; /* Adjust color based on your theme */
+    text-align: center;
+}
+
+.footer-content {
+    text-align: center;
+
+}
+
+.socials {
+    list-style-type: none;
+    padding: 0;
+}
+
+.socials li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.socials li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.socials li a:hover {
+    color: #4db8ff; /* Adjust color based on your theme */
+}
+header, footer {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-links li a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    color: #4db8ff; /* Adjust color based on your theme */
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.socials {
+    list-style-type: none;
+    padding: 0;
+}
+
+.socials li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.socials li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.socials li a:hover {
+    color: #4db8ff; /* Adjust color based on your theme */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+    padding-bottom: 20px; /* Adjust this value to create more space above the footer */
+}
+
+footer {
+    width: 100%;
+    height: 330px; /* Adjust based on your content */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    text-align: center;
+    padding: 50px 0; /* Increase padding for a bigger footer */
+    padding-top: 60px;
+}
+
+.github-panel {
+    margin-bottom: 50px; /* Adjust the space between the GitHub panel and the footer */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1; /* Ensures that the container takes up all available space, pushing the footer down */
+}
+
+footer {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* Adjust if needed based on your layout */
+}
+img[src="img/logo.png"] {
+    max-width: 100px; /* Adjusts the logo's width to fit your layout */
+    height: auto; /* Keeps the aspect ratio intact */
+    display: flex; /* Ensures the logo is centered if necessary */
+    margin: 0 auto; /* Centers the logo horizontally */
+    opacity: 0.6; /* Optional: makes the logo slightly transparent */
+    text-align: left;
+}
+
+/* Styles for the header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Example background */
+    padding: 10px 0; /* Adjust padding as needed */
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1200px; /* Max width for the navbar content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    text-align: center;
+    margin-left: -200px;
+}
+
+.nav-links li {
+    padding: 0 12px; /* Adjust spacing between links */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff; /* Adjust link color */
+}
+
+/* Add responsiveness */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+    }
+}
+/* Ensures the body takes up the full viewport height */
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+/* Centers header content */
+header {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 10%; /* Takes up the full viewport height */
+    text-align: center;
+    margin-right: -450px;
+}
+
+/* Additional styles for the header */
+header nav {
+    text-align: center;
+}
+
+/* Style for nav items, if needed */
+.nav-links {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 15px; /* Adjust spacing between nav items */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff; /* Adjust color as needed */
+}
+
+/* Style for highlighting a section */
+.highlight {
+    border: 2px solid #e00fdd; /* Example highlight style */
+    padding: 10px; /* Adjust as needed */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.rocket {
+    position: absolute;
+    bottom: -50px; /* Start off-screen */
+    animation: rocketJump 5s infinite ease-in-out;
+    /* Randomize left position for each rocket if you have multiple */
+}
+
+@keyframes rocketJump {
+    from {
+        transform: translateY(100vh); /* Start from bottom */
+    }
+    to {
+        transform: translateY(-100vh); /* Move to top */
+    }
+}
+/* Ensure the container of your content has a higher z-index */
+.container {
+    position: relative; /* Required for z-index to work */
+    z-index: 2; /* Higher than the rocket's z-index */
+}
+
+/* Adjust the rocket's z-index to ensure it's below the content */
+.rocket {
+    position: absolute;
+    bottom: -50px; /* Start off-screen */
+    z-index: 1; /* Ensure this is lower than the content's z-index */
+    animation: rocketJump 5s infinite ease-in-out;
+}
+
+@keyframes rocketJump {
+    from {
+        transform: translateY(100vh); /* Start from bottom */
+    }
+    to {
+        transform: translateY(-100vh); /* Move to top */
+    }
+}
+
+/* Ensure the body and html tags do not limit the visibility of content */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}

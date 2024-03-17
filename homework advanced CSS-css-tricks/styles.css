@@ -1,0 +1,419 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: #333; /* Assuming a dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Card styling */
+.mini-card {
+    background: linear-gradient(145deg, #2c3e50, #34495e);
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 20px;
+    position: relative;
+    width: 312px;
+    height: 325px;
+    overflow: hidden;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Date and article type */
+.mini-card time {
+    font-size: 12px;
+    color: #ecf0f1;
+    opacity: 0.75;
+    margin-bottom: 10px;
+}
+
+.mini-card time strong {
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+/* Article title */
+.mini-card-title {
+    font-size: 20px;
+    font-weight: 750;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.mini-card-title a {
+    text-decoration: none;
+    color: #ecf0f1;
+    transition: 0.3s ease;
+}
+
+.mini-card-title a:hover {
+    color: #909090;
+}
+
+
+
+/* Author styling */
+.author-row {
+    margin-top: auto; /* Pushes the author row to the bottom of the card */
+    align-items: center;
+    position: relative;
+}
+
+.author-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+    background-size: cover;
+
+}
+
+.author-name {
+    font-size: 16px;
+    color: #ecf0f1;
+    text-decoration: none;
+    margin-bottom: 105px;
+}
+
+/* Hover effect for the card */
+.mini-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.7);
+    transform: rotate(7deg);
+
+}
+
+/* Responsive styling if needed */
+@media (max-width: 768px) {
+    .mini-card {
+        width: 90%;
+        height: auto;
+    }
+}
+
+.mini-card {
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: linear-gradient(85deg,#434343,#262626);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: 0.2s;
+    margin: 0;
+}
+
+.article-card {
+    background: #fff;
+    color: #474747;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    -webkit-filter: drop-shadow(0 5px 15px rgba(0,0,0,.24));
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,.24));
+    display: flex;
+    flex-direction: column;
+}
+
+.module {
+    clear: both;
+    margin: 0 0 1rem;
+    position: relative;
+}
+
+.card-grid {
+    scrollbar-color: #666 #201c29;
+    scrollbar-gutter: always;
+    padding: 3rem 0 3rem 2rem;
+    margin: 0;
+    display: flex;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.author-row {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 0px; /* Spacing between the image and the name */
+}
+
+.author-img {
+    flex-shrink: 0; /* Prevent the image from shrinking */
+    width: 10px; /* Adjust as needed */
+    height: 10px; /* Adjust as needed */
+    border-radius: 50%; /* Make image round */
+    overflow: hidden;
+    position: relative;
+}
+
+.author-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+}
+
+.author-name {
+    font-size: 16px;
+    color: #fff; /* Adjust the color as needed */
+    margin-left: 10px; /* Spacing from the image */
+    align-self: center; /* Aligns the text to center with the image */
+    padding-top: 100px;
+
+}
+
+
+
+
+.author-row {
+    display: flex;
+    align-items: center; /* This will vertically center the author-name with the image */
+    padding-top: 65px;
+}
+
+.author-img {
+    border-radius: 50%; /* Assuming you want a round image */
+    width: 35px; /* Or your desired size */
+    height: 35px; /* Or your desired size */
+    object-fit: cover; /* To ensure the image covers the area without stretching */
+    cursor: pointer;
+}
+
+.author-name {
+    margin-left: 10px; /* This will create some space between the image and the name */
+}
+
+.tags a {
+    text-transform: uppercase; /* Capitalizes the tags */
+    color: orange; /* Changes the tag color to orange */
+    margin-right: 10px; /* Adds spacing between the tags */
+    text-decoration: none; /* Removes the underline from the links */
+}
+
+.tag {
+    display: inline; /* Allows the tag to sit next to others inline and take padding */
+    color: white; /* White text color */
+    padding: 5px 15px; /* Spacing inside the tag */
+        margin: 2 2px; /* Spacing between tags */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 12px; /* Adjust the font size as needed */
+    text-transform: uppercase; /* Makes the text uppercase */
+    font-weight: 999; /* Makes the text bold */
+    color: #ff8c00; /* Changes the tag color to orange */
+    font-weight: 1750;
+    font-size: 8px;
+    padding: 0px 20px 30px 0px;
+}
+
+.author-name {
+    /* Add your existing styles here */
+    margin-left: 0px; /* Adjust this value to bring the text closer to the image */
+    font-weight: 550;
+    cursor: pointer;
+}
+
+#h2 {
+    padding-right: 700px;
+}
+
+.tags span:hover  {
+    color: #b4af83;
+    cursor: pointer;
+}
+
+.mini-card {
+    transition: 0.3s ease; /* Smooth transition for the transform properties */
+    display: inline-block; /* Or as per your layout needs */
+    /* Other styling for your card (width, height, background, etc.) */
+}
+
+.mini-card:hover {
+    transform: translateY(-20px) rotate(5deg); /* Moves left and rotates slightly */
+}
+
+#card2 {
+    position: relative; /* or 'absolute', depending on layout */
+    left: -80px; /* Adjust value as needed */
+}
+
+#card1:hover + #card2 {
+    transform: translateX(50px); /* Adjust the value as needed */
+}
+
+.mini-card {
+    background: linear-gradient(85deg,#434343,#262626);
+    box-shadow: -3rem 0 3rem -2rem #000
+}
+
+#card1:hover + #card2,
+#card2:hover + #card3,
+#card3:hover + #card4,
+#card4:hover + #card5,
+#card5:hover + #card6,
+#card6:hover + #card7 {
+    transform: translateX(60px); /* Adjust the value as needed */
+}
+
+#card3 {
+    position: relative;
+    left: -160px;
+}
+
+#card4 {
+    position: relative;
+    left: -240px;
+}
+
+#card5 {
+    position: relative;
+    left: -320px;
+}
+
+#card6 {
+    position: relative;
+    left: -400px;
+}
+
+#card7 {
+    position: relative;
+    left: -480px;
+}
+
+.author-row {
+    margin-top: -70px; /* Adjust the value as needed */
+}
+
+/* When hovering over card1, affect all subsequent cards */
+#card1:hover ~ #card2,
+#card1:hover ~ #card3,
+#card1:hover ~ #card4,
+#card1:hover ~ #card5,
+#card1:hover ~ #card6,
+#card1:hover ~ #card7 {
+    transform: translateX(80px); /* Adjust the translateY value as needed */
+}
+
+/* Repeat for each card, reducing the number of affected cards each time */
+#card2:hover ~ #card3,
+#card2:hover ~ #card4,
+#card2:hover ~ #card5,
+#card2:hover ~ #card6,
+#card2:hover ~ #card7 {
+    transform: translateX(80px);
+}
+
+/* Continue pattern down to the last card */
+#card3:hover ~ #card4,
+#card3:hover ~ #card5,
+#card3:hover ~ #card6,
+#card3:hover ~ #card7 {
+    transform: translateX(80px);
+}
+
+/* And so on for each card until card6 */
+#card4:hover ~ #card5,
+#card4:hover ~ #card6,
+#card4:hover ~ #card7 {
+    transform: translateX(80px);
+}
+
+#card5:hover ~ #card6,
+#card5:hover ~ #card7 {
+    transform: translateX(80px);
+}
+
+#card6:hover ~ #card7 {
+    transform: translateX(80px);
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 13px; /* Optional: adds space between cards */
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    padding-top: 200px;
+    padding-left: 20px;
+    padding-bottom: 35px;
+}
+
+.mini-card {
+    flex: 0 0 auto; /* Prevents cards from shrinking */
+    width: 270px; /* Adjust the width as per your design */
+    height: 320px;
+
+    /* Your existing styles for mini-card */
+}
+
+/* Additional styles to ensure images and content do not overflow */
+.mini-card img {
+    max-width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.author-row img {
+    flex-shrink: 0;
+}
+
+.mini-card-title {
+    line-height: 1; /* Decrease this value to reduce space between lines */
+    /* Other styles... */
+    padding-top: 7px;
+}
+
+/* Target the last .mini-card element */
+.mini-card:last-child::after {
+    content: ''; /* This is necessary to generate a pseudo-element */
+    display: block; /* This makes sure the pseudo-element is treated as a block */
+    width: 100%; /* The gradient will span the full width of the card */
+    height: 5px; /* The height of the gradient line */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0));
+    /* This creates a gradient that fades from transparent to black and back to transparent */
+}
+
+.scrollbar-gradient {
+    width: 100px; /* Width of the gradient line */
+    height: 100%; /* Height should match the container of the cards */
+    background: linear-gradient(to right, rgba(255, 0, 0, 0), #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, rgba(255, 0, 0, 0)); /* Example gradient */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5); /* Example box shadow */
+    position: absolute; /* Position it relative to the scrollable container */
+    right: 0; /* Align to the right end of the container */
+    top: 0; /* Align to the top of the container */
+}
+
+.container-of-mini-cards {
+    position: relative; /* Add this line */
+    overflow-x: auto; /* Assuming this already exists */
+    white-space: nowrap; /* Assuming this already exists */
+}
+
+.scrollbar-gradient {
+    margin-top: 330px;
+    padding-top: 330px;
+    margin-bottom: 470px;
+    width: 5.2px; /* Width of the gradient line */
+    height: 143px; /* Height should match the container of the cards */
+    background: linear-gradient(130deg,#ff7a18,#af002d 41.07%,#319197 76.05%); /* Custom gradient */
+    position: absolute; /* Position it relative to the scrollable container */
+    right: 0; /* Align to the right end of the container */
+    z-index: 10; /* Ensure it's above other elements */
+    box-shadow: black;
+    border-radius: 90px;
+
+}
+
+

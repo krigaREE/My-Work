@@ -1,0 +1,56 @@
+
+body::-webkit-scrollbar, html::-webkit-scrollbar {
+    display: none;
+}
+
+
+body, html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+}
+
+
+.horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    width: 300vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.item {
+    width: 200px;
+    height: 100px;
+    margin-right: 10px;
+    background-color: lightblue;
+    margin-left: 100px;
+}
+
+
+.horizontal-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.horizontal-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.horizontal-scroll > .item:nth-child(odd) {
+    margin-top: 500px;
+}
+
+
+
+.vertical-progress {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    border-left: 1px solid black;
+    z-index: -1;
+}
