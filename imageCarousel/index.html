@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Image Carousel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="image fade">
+    <img src="img/Lam0.jpg" alt="CarOne" width="100%">
+  </div>
+  <div class="image fade">
+    <img src="img/Lam1.jpg" alt="CarOne" width="100%">
+  </div>
+  <div class="image fade">
+    <img src="img/Lam2.jpg" alt="CarOne" width="100%">
+  </div>
+  <div class="image fade">
+    <img src="img/Lam3.jpg" alt="CarOne" width="100%">
+  </div>
+  <div class="image fade">
+    <img src="img/Lam4.jpg" alt="CarOne" width="100%">
+  </div>
+
+  <i onclick="show_image(-1)" id="prev" class="fa-regular fa-circle-left"></i>
+  <i onclick="show_image(1)" id="next" class="fa-regular fa-circle-right"></i>
+
+  <div class="dots">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

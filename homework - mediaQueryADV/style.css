@@ -1,0 +1,99 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+
+.main-container, .section-one, .section-three {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-container {
+    padding: 20px;
+}
+
+
+
+
+.brick-1  {
+    height: 200px;
+    background-color: lightgreen;
+}
+
+
+.brick-2 {
+    height: 300px;
+    background-color: salmon;
+}
+
+
+.brick-3 {
+    height: 600px;
+    background-color: magenta;
+}
+
+.brick-4 {
+    height: 100px;
+    background-color: #4db8ff;
+}
+
+
+.brick-5 {
+    height: 200px;
+    background-color: lightseagreen;
+}
+
+
+.brick-6 {
+    height: 300px;
+    background-color: #d963b2;
+}
+
+
+
+@media screen and (min-width: 600px) {
+    .main-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .section-one, .section-two{
+        flex: 1;
+    }
+
+
+    .section-three {
+        width: 100%;
+    }
+
+}
+
+
+@media screen and (min-width: 1200px) {
+    .section-three {
+        width: initial;
+        flex: 1;
+    }
+
+    .brick-3 {
+        height: 10000px;
+    }
+
+
+    .section-one, .section-three {
+        position: sticky;
+        top: 20px;
+        align-self: flex-start;
+    }
+}
+
+
