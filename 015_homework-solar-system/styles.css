@@ -1,0 +1,242 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body, html, main {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("img/galaxy.webp");
+    z-index: 2;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.swiper {
+
+    padding: 3.2rem;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    background: white;
+    width: 110vh;
+    height: 110vh;
+    margin-left: 50px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 1px;
+    z-index: -1;
+    background-image: url("img/galaxy.webp");
+    background-position: center ;
+    background-size: cover;
+}
+
+.btn-bottom, .btn-left, .btn-right, .btn-top {
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+
+}
+
+
+.btn-top, .btn-bottom {
+    border-radius: 50%;
+}
+
+.swiper-btns {
+    translate: none;
+    rotate: none;
+    scale: none;
+    outline-offset: -1px;
+    border-radius: 100%;
+    outline-width: 3px;
+    outline-style: solid;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+}
+
+
+.circle-container {
+    animation: rotate-around-circle 48s infinite linear;
+    position: relative;
+    width: 90%;
+    height: 90%;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.btn-top {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 1px));
+
+
+}
+
+.btn-right {
+
+    top: 50%;
+    right: 0;
+    transform: translate(calc(50% + 1px), -50%);
+}
+
+.btn-bottom {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, calc(50% + 1px));
+}
+
+.btn-left {
+    top: 50%;
+    left: 0;
+    border-radius: 50%;
+    width: 54px;
+    height: 54px;
+    z-index: 9999;
+    transform: translate(calc(-50% - 1px), -50%);
+
+}
+
+
+.cacao-cu-lapte {
+    animation-duration: 46s;
+
+}
+
+.lichid {
+    animation-duration: 44s;
+}
+
+.bravo-robert {
+    animation-duration: 42s;
+}
+
+.planeta {
+    animation-duration: 40s;
+}
+
+.alta-planeta {
+    animation-duration: 38s;
+}
+
+.si-planeta {
+    animation-duration: 36s;
+}
+
+.no-planeta {
+    animation-duration: 34s;
+}
+
+.yes-planeta {
+    animation-duration: 32s;
+}
+
+
+
+.sun {
+    background-color: yellow;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid orange;
+    background-image: radial-gradient(circle, #FFD700 0%, #FFA500 70%, #FF8C00 100%);
+    box-shadow: 0 0 50px #FFD700;
+    animation: glow 2s infinite alternate;
+}
+
+h1 {
+    color: #fa7707;
+    animation: rotateAnimation 5s infinite linear;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 303px;
+    font-size: 1rem;
+    margin-left: 60px;
+
+}
+
+P {
+    color: #fa7707;
+    animation: rotateAnimation 5s infinite linear;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 1500px;
+}
+
+
+
+@keyframes rotate-around-circle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes  rotate-around-planet {
+
+    0% {transform: rotate(0deg) translate(calc(-50% - 1px), -50%);}
+    100% {transform: rotate(360deg) translate(calc(-50% - 1px), -50%);}
+
+}
+
+
+@keyframes rotate-around-circle-reverse {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 80px #FFD700;
+    }
+    to {
+        box-shadow: 0 0 160px #FFA500;
+    }
+}
+
+
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+
+}

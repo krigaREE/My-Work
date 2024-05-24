@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body, html {
+    position: absolute;
+}
+
+
+header {
+
+    position: absolute;
+    width: 1870px;
+    height: 738px;
+    left: 14px;
+    top: 0px;
+    background: url(img/boemian.png);
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+
+
+.text-header {
+    display: flex;
+    justify-content: center;
+    height: 55vh;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.text-one {
+    font-weight: bold;
+
+}
+
+.text-two {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.input {
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 330px;
+    left: 750px;
+
+}
+
+.input-container {
+    display: flex;
+    position: relative;
+}
+
+.input-container input[type="text"] {
+    flex: 1;
+    height: 50px;
+    width: 450px;
+    padding-right: 40px;
+}
+
+.input-container input::placeholder {
+   position: absolute;
+    left: 55px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 15px;
+}
+
+.input-container button {
+    margin-left: -3px;
+    width: 120px;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    background-color: #5474FD;
+    border: none;
+    position: absolute;
+    height: 45px;
+    transform: translateY(-50%);
+    right: 5px;
+    top: 50%;
+}
+
+.scroll-down {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    cursor: pointer;
+    position: relative;
+    left: 890px;
+}
+
+.need-center {
+    position: relative;
+    left: 35px;
+}
+
+
+.navigation {
+    height: 90px;
+    background-color: #5474FD;
+    position: relative;
+    top: 180px;
+    display: flex;
+    align-items: center;
+}
+
+.navigation nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation nav a {
+    text-decoration: none;
+    color: white;
+    margin-right: 32px;
+}
+
+.navigation nav h1 {
+    text-decoration: none;
+    color: white;
+    margin-right: 830px;
+    font-weight: bold;
+    margin-left: 20px;
+    position: relative;
+    bottom: 5px;
+}
+
+
+.choose-us {
+    background-image: url("img/choose-us.png");
+    background-position: center;
+    background-size: cover;
+    width: 1870px;
+    height: 685px;
+    position: relative;
+    top: 810px;
+    left: 14px;
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.text-choose-us {
+    position: relative;
+    top: 200px;
+    left: 200px;
+}
+
+.text-choose-us p {
+    position: relative;
+    top: 32px;
+}
+
+.text-choose-us button {
+    position: relative;
+    top: 80px;
+    text-decoration: none;
+    text-underline: none;
+    color: white;
+    height: 50px;
+    width: 210px;
+    background-color: #496BFE;
+    border: none;
+    cursor: pointer;
+}
+
+.images img {
+    width: 320px;
+    height: 220px;
+    display: flex;
+    position: relative;
+    left: 840px;
+    bottom: 280px;
+}
+
+.second-image {
+    margin-left: 85px;
+    margin-top: 10px;
+}
+
+.how-it-works {
+    height: 340px;
+    width: 1870px;
+    position: relative;
+    top: 810px;
+    left: 14px;
+    background-color: #333333;
+}
+
+.how-it-works svg {
+    position: relative;
+    left: 500px;
+    top: 100px;
+}
+
+.texting {
+    display: flex;
+}
+
+
+.search-places {
+    position: relative;
+    left: 450px;
+    top: 50px;
+    color: white;
+}
+
+.search-places i, .select-places i, .book-enjoy i {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 38px;
+    color: lightblue;
+}
+
+.select-places {
+    position: relative;
+    left: 690px;
+    top: 50px;
+    color: white;
+}
+
+.select-places i {
+    color: red;
+}
+
+
+.book-enjoy {
+    position: relative;
+    top: 50px;
+    color: white;
+    left: 930px;
+}
+
+
+.section-one {
+    background-image: url("img/sectionone.png");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 1870px;
+    height: 700px;
+    left: 14px;
+    top: 1800px;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.grand {
+    width: 543px;
+    height: 374px;
+    background-color: rgba(19, 19, 19, 0.9);
+    color: white;
+    position: relative;
+    top: 200px;
+    left: 350px;
+}
+
+.grand button, .grand-two button {
+    position: relative;
+    text-decoration: none;
+    text-underline: none;
+    color: white;
+    height: 50px;
+    width: 210px;
+    background-color: #496BFE;
+    border: none;
+    cursor: pointer;
+    top: 110px;
+    left: 20px;
+}
+
+.grand p, .grand-two p {
+    position: relative;
+    top: 70px;
+    left: 20px;
+}
+
+.section-two {
+    background-image: url("img/sectiontwo.png");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 1870px;
+    height: 700px;
+    left: 14px;
+    top: 2400px;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+
+.grand-two {
+    width: 543px;
+    height: 374px;
+    background-color: rgba(19, 19, 19, 0.9);
+    color: white;
+    position: relative;
+    top: 200px;
+    left: 1050px;
+}
+
+.testimonial {
+    background-image: url("img/testimonial.png");
+    background-position: center;
+    background-size: cover;
+    height: 731px;
+    width: 1870px;
+    position: absolute;
+    left: 14px;
+    top: 3100px;
+}
+
+.testimonial h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 100px;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+p i {
+    font-size: 38px;
+}
+
+.client-say {
+    display: flex;
+    color: white;
+    position: relative;
+    top: 250px;
+    left: 500px;
+    background-color: rgba(19, 19, 19, 0.9);
+    width: 1100px;
+}
+
+.client-say img {
+    width: 445px;
+    height: 284px;
+}
+
+.client-say p {
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+
+.client-say p i {
+    color: dodgerblue;
+}
+
+footer {
+    background-color: #232323;
+    position: absolute;
+    width: 1870px;
+    height: 271px;
+    left: 14px;
+    top: 3800px;
+}
+
+.fa-linkedin-in {
+    color: #4db8ff;
+}
+
+.footer-text {
+    color: white;
+    position: relative;
+    top: 150px;
+    left: 900px;
+
+}
+
+
+.footer-text h2 {
+    font-size: 32px;
+    position: relative;
+    right: 25px;
+
+}
+
+.footer-text p {
+    position: relative;
+    bottom: 10px;
+    font-family: Roboto, sans-serif;
+}
+
+.icons i {
+    margin-right: 15px;
+}
+
+

@@ -1,0 +1,33 @@
+body {
+    font-family: Roboto, sans-serif;
+    text-align: center;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+
+#opponent-choice {
+    width: 240px;
+    height: 240px;
+    /*background-color: cyan;*/
+    margin-top: 10px;
+}
+
+#your-choice {
+    width: 240px;
+    height: 240px;
+    /*background-color: yellow;*/
+    margin-top: 10px;
+}
+
+#choices {
+    width: 240px;
+    height: 80px;
+    /*background-color: green;*/
+    margin-top: 10px;
+    margin: 0 auto;
+}
+
+#choices img {
+    width: 80px;
+    height: 80px;
+}

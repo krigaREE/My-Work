@@ -1,0 +1,397 @@
+:root {
+    --bgColor: #333;
+    --textPrimary: #fff;
+    --textSecondary: #666;
+    --primaryColor: #fd4;
+}
+
+
+
+.fa-khanda {
+    width: 40px;
+    color: var(--primaryColor);
+    margin-right: 25px;
+}
+
+main {
+    width: 600px;
+    margin: 50px auto;
+}
+
+
+body {
+    font-family: Roboto, sans-serif;
+    background-color: var(--bgColor);
+    color: var(--textPrimary);
+    font-size: 1.4rem;
+
+}
+
+h1 {
+    color: var(--primaryColor);
+}
+
+#header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px 6px 30px;
+}
+
+#buttons {
+    text-align: right;
+}
+
+#info {
+    color: var(--primaryColor);
+}
+
+button {
+    background: rgba(255,255,255,0.2);
+    border: 0;
+    color: rgba(255,255,255,0.5);
+    padding: 5px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: lightgray;
+}
+
+div#game {
+    line-height: 35px;
+    height: 105px;
+    overflow: hidden;
+    position: relative;
+}
+
+#focus-here {
+    position: absolute;
+    inset: 0;
+    text-align: center;
+    position: absolute;
+    inset: 0;
+
+
+
+}
+
+#game:focus #focus-here {
+    display: none;
+}
+#game:focus #words {
+    filter: blur(0);
+}
+
+
+
+#words {
+    filter: blur(5px);
+    color: var(--primaryColor);
+}
+
+div.word {
+    display: inline-block;
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 0 5px;
+}
+
+.letter.correct {
+    color: green;
+}
+
+.letter.incorrect {
+    color: #f55;
+}
+
+#cursor {
+    display: none;
+    width: 2px;
+    height: 1.6rem;
+    background: var(--primaryColor);
+    position: fixed;
+    top: 197px;
+    left: 665px;
+    animation: blink .3s infinite;
+}
+
+#game:focus #cursor {
+    display: block;
+}
+
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+div#game:focus {
+    outline: 0;
+}
+
+#game.over #words{
+    opacity: 50%
+}
+
+#game.over:focus #cursor {
+    display: none;
+}
+
+#game.over #focus-here {
+    display: none;
+}
+
+#game.over {
+    filter: blur(0);
+}
+
+.image {
+    background: url('Increase-typing-speed-removebg-preview.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 700px;
+    position: relative;
+    top: 100px;
+    left: -35px;
+    opacity: 0.7;
+}
+
+p {
+    font-size: 1rem;
+    position: relative;
+    top: 30px;
+    color: var(--primaryColor);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    transition: .2s;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0 10px;
+
+
+}
+
+.keyboard_wrapp {
+    max-width: 1008px;
+    width: 100%;
+    background-color: var(--primaryColor);
+    overflow: hidden;
+    position: relative;
+    overflow: hidden;
+    order: 2;
+}
+
+.row {
+    display: flex;
+}
+
+.keys {
+    width: 60px;
+    height: 60px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+    transition: .2s;
+    z-index: 5;
+    color: black;
+}
+
+.backspace_key {
+    width: 120px;
+}
+
+.tab_key {
+    width: 90px;
+}
+
+.slash_key {
+    width: 90px;
+}
+
+.caps_lock_key {
+    width: 128px;
+}
+
+.enter_key {
+    width: 120px;
+}
+
+.shift_key {
+    width: 124px;
+}
+
+.space_key {
+    max-width: 600px;
+    width: 100%;
+}
+
+.text {
+    max-width: 1008px;
+    width: 100%;
+    height: 90px;
+    margin-bottom: 30px;
+    border: none;
+    outline: none;
+    font-size: 26px;
+    background-color: #f7f7f7;
+    padding-left: 10px;
+    transition: .2s;
+}
+
+.keys.active {
+    background-color: #333;
+    color: #fff;
+}
+
+.keys.remove {
+    animation: keys_animation 0.5s forwards ;
+}
+
+@keyframes keys_animation {
+    0% {
+        background-color: #333;
+        color: #fff;
+    }
+    100% {
+        background-color: #fff;
+        color: #000;
+    }
+}
+
+body.active {
+    background-color: rgb(54,54,54);
+}
+
+.night_mode {
+    width: 80px;
+    height: 30px;
+    background-color: #e6e6e6;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.night_mode.active {
+    background-color: #111111;
+}
+
+.toggle_circle {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(54,54,54);
+    border-radius: 50px;
+    margin: 0 5px;
+    position: absolute;
+    left: 0;
+    transition: .2s;
+}
+
+.toggle_circle.active {
+    left: 60%;
+    background-color: #fff;
+}
+
+.keyboard_wrap.active {
+    background-color: #585858;
+}
+
+.keys.keys_night {
+    background-color: #3c3c3c;
+    color: #fff;
+}
+
+.text.active {
+    background-color: #2b2b2b;
+    color: #fff;
+}
+
+.keys.keys_night.active {
+    background-color: #fff;
+    color: #333;
+}
+
+.keys.keys_night.remove {
+    animation: keys_night_animation 0.5s forwards;
+}
+
+@keyframes keys_night_animation {
+    0%{
+        background-color: #fff;
+        color: #000;
+    }
+    100% {
+        background-color: #333;
+        color: #fff;
+    }
+}
+
+.change_light_color {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    right: 150px;
+    top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.colors_input {
+    width: 100px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+
+.keyboard_lights {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+p {
+    position: relative;
+    bottom: 160px;
+}
+
+.space {
+    color: green;
+}

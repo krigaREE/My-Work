@@ -1,0 +1,388 @@
+:root {
+    --background-color: #f4f4f4;
+    --border-color: #333;
+    --border: 1px solid var(--border-color);
+    --spacing-1: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+button {
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+main {
+    height: 200vh;
+}
+
+header {
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    background-color: var(--background-color);
+    border-bottom: var(--border);
+    display: flex;
+}
+
+.logo {
+    padding: var(--spacing-1);
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.middle-section {
+    flex: 1;
+    border-left: var(--border);
+    border-right: var(--border);
+    display: flex;
+}
+
+.middle-section nav {
+    display: none;
+    flex: 1;
+    padding: 0 var(--spacing-1);
+    gap: var(--spacing-1);
+}
+
+.middle-section button {
+    flex: 1;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.middle-section .content {
+    width: fit-content;
+    position: relative;
+}
+
+.middle-section .content::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--border-color);
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.middle-section button:hover .content::after {
+    width: 100%;
+}
+
+.right-section {
+    display: flex;
+}
+
+.menu-button,
+.simple-button {
+    padding: 0 var(--spacing-1);
+}
+
+.menu-button {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.simple-button {
+    font-size: 14px;
+    display: none;
+}
+
+.simple-button:not(:last-child) {
+    border-right: var(--border);
+}
+
+.simple-button:hover,
+.menu-button:hover {
+    background-color: var(--border-color);
+    color: white;
+}
+
+.cookie-consent-container {
+    position: fixed;
+    bottom: var(--spacing-1);
+    right: var(--spacing-1);
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.19) 10px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: 0.3s;
+}
+
+.cookie-consent-container:hover {
+    transition-duration: 1s;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+
+.dropdown-container {
+    position: relative;
+    display: flex;
+}
+
+.dropdown-content {
+    display: block;
+    position: absolute;
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 100%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, visibility 0s linear 0.5s, transform 0.5s ease;
+    text-transform: uppercase;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.dropdown-container:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition-delay: 0s;
+    margin-top: 49px;
+    width: 130px;
+
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    color: #333333;
+}
+
+
+.dropdown-content a {
+    display: block;
+    margin-bottom: 10px;
+    transform: translateY(-20px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    text-align: center;
+    opacity: 1;
+    padding-top: 20px;
+}
+
+.dropdown-content {
+    position: absolute;
+    left: -35px;
+}
+
+
+.dropdown-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
+}
+
+.dropdown-container:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+}
+
+.dropdown-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    color: #333333;
+    text-align: center;
+}
+
+
+.dropdown-content a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.dropdown-content a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #333;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.dropdown-content a:hover::after {
+    width: 100%;
+}
+
+.main-text {
+    width: 313px;
+    font-weight: bold;
+    margin-top: 35px;
+    font-size: 1.1rem;
+    padding: 10px;
+    z-index: 9999;
+    transform: scale(1.2, 1.1);
+    margin-left: 50px;
+
+
+}
+
+.background-gif {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 5px;
+}
+
+img {
+    width: 1520px;
+    height: 900px;
+    padding-bottom: 300px;
+}
+
+
+.cookie-consent-container {
+    position: fixed;
+    bottom: 7px;
+    right: 10px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 999999;
+    width: 426px;
+    height: 230px;
+    border-radius: 15px;
+}
+
+.cookie-consent-container p {
+    margin: 0 0 20px;
+}
+
+.buttons-container {
+    text-align: center;
+}
+
+.buttons-container button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.text {
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.text-1 {
+    text-align: center;
+    font-size: 0.8rem;
+    padding-right: 80px;
+}
+
+.cookie-button {
+    font-size: 8px;
+    border-width: 1px;
+    border-style: solid;
+    background-color: rgba(255, 255, 255, 0.45);
+    border-radius: 4px;
+    width: auto;
+    height: auto;
+    font-size: 0.60rem;
+    white-space: nowrap;
+
+}
+
+
+.buttons-container {
+    margin-top: 22px;
+}
+
+.cookie-accept {
+    font-size: 8px;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #000000;
+    color: white;
+    border-radius: 4px;
+    width: 105px;
+    height: 35px;
+    font-size: 0.65rem;
+}
+
+.close-button {
+    position: relative;
+    bottom: 10px;
+    left: 370px;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+}
+
+.callout {
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+
+.callout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.cookie-links {
+    display: inline-block;
+    margin-top: 2px;
+    width: 405px;
+    text-align: center;
+}
+
+
+.cookie-links a {
+    text-align: center;
+    color: #333;
+    font-size: 0.7rem;
+}
+
+.second-link {
+    margin-left: 5px;
+}
+
+@media (min-width: 980px) {
+    .menu-button {
+        display: none;
+    }
+
+    .simple-button {
+        display: flex;
+        align-items: center;
+    }
+
+    .middle-section nav {
+        display: flex;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .cookie-consent-container {
+        width: auto;
+    }
+
+
+}

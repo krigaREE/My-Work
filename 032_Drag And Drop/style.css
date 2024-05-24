@@ -1,0 +1,65 @@
+* {
+    font-family: Roboto, sans-serif;
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: #0b0423;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+#left, #right {
+    width: 300px;
+    min-height: 400px;
+    margin: 20px;
+    border: 2px dashed #fff;
+}
+
+.fa-list-ul {
+    color: whitesmoke;
+    margin: 0 10px;
+}
+
+.list {
+    background: #e91e63;
+    height: 60px;
+    margin: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: grab;
+}
+
+h1 {
+    color: white;
+    display: flex;
+    position: relative;
+    text-align: center;
+    left: 490px;
+    bottom: 250px;
+}
+
+.todo {
+    position: relative;
+    left: 270px;
+}
+
+.fa-check {
+    margin-left: 15px;
+    color: green;
+}
+
+.fa-calendar {
+    margin-left: 15px;
+    color: dodgerblue;
+}
